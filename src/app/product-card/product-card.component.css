@@ -1,0 +1,45 @@
+.card {
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s; /* Smooth transform on hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    color: #6c757d; /* Bootstrap secondary text color */
+}
+.cart-button {
+    font-size: 1.2rem;        /* Increase font size */
+    font-weight: bold;        /* Make text bold */
+    color: white;             /* Text color */
+    background-color: red;    /* Background color */
+    border: none;             /* Remove border */
+    padding: 10px 20px;       /* Add padding */
+    border-radius: 5px;       /* Rounded corners */
+    text-decoration: none;     /* Remove underline */
+}
+
+.cart-button:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+
+/* Positioning the button */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Align items in navbar */
+}
+
+.navbar .collapse {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.navbar .navbar-nav {
+    margin-left: auto; /* Push the nav to the right */
+}

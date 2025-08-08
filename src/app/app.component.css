@@ -1,0 +1,54 @@
+.cart-items {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.show {
+  display: block;
+}
+body {
+            background-color: #f0f4f8; /* Light background */
+        }
+        header {
+            background: linear-gradient(90deg, #007bff, #6f42c1); /* Gradient from blue to purple */
+            color: #ffffff; /* White text */
+        }
+        footer {
+            background: linear-gradient(90deg, #343a40, #495057); /* Dark gradient */
+            color: #ffffff; /* White text */
+        }
+        footer a {
+            color: #ffffff; /* White links in footer */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+        footer a:hover {
+            color: #ffd700; /* Gold on hover */
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff; /* White text in navbar */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+        .nav-link:hover {
+            color: #ffd700; /* Gold hover effect */
+            text-decoration: underline; /* Underline on hover */
+        }
+        main h1 {
+            color: #343a40; /* Dark text for contrast */
+        }

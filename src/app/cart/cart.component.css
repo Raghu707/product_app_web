@@ -1,0 +1,16 @@
+.card {
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s; /* Smooth transform on hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    color: #6c757d; /* Bootstrap secondary text color */
+}

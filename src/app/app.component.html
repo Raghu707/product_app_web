@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f0f4f8; /* Light background */
+        }
+        header {
+            background-color: #4A90E2; /* Soft blue */
+            color: #ffffff; /* White text */
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff; /* White text in navbar */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+        .nav-link:hover {
+            color: #FF6F61; /* Coral on hover */
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+    <title>Product App</title>
+</head>
+<body>
+
+<header class="py-3">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">Product App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<router-outlet></router-outlet> <!-- Router outlet for navigation -->
+
+        
+    
+<!-- Main content area -->
+
+
+
+<footer class="text-light py-4" style="background-color: #343a40;">
+    <div class="container text-center">
+        <p class="mb-0">© 2023 Product App. All Rights Reserved.</p>
+        <ul class="list-inline mt-2">
+            <li class="list-inline-item">
+                <a href="#" class="text-light">Privacy Policy</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#" class="text-light">Terms of Service</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#" class="text-light">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</footer>

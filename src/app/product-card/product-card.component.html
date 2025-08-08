@@ -1,0 +1,65 @@
+<div class="container mt-4">
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+
+<body>
+<a class="nav-link" routerLink="/cart">
+    <i class="bi bi-cart"></i> Cart 
+    <span class="badge bg-danger">{{ cartService.getItemCount() }}</span>
+</a>
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Product List</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4" *ngFor="let product of products">
+            <div class="card h-100 animate__animated animate__fadeIn">
+                <img [src]="product.imageUrl" class="card-img-top" alt="{{ product.name }}" />
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <h5 class="fw-bolder">{{ product.name }}</h5>
+                        <p>${{ product.price }}</p>
+                        <p *ngIf="product.stock <= 0" class="text-danger">Out of Stock</p>
+                        <p *ngIf="product.stock > 0">Available: {{ product.stock }}</p>
+
+                        <!-- Size Dropdown -->
+                        <div class="form-group">
+                            <label for="sizeSelect">Select Size:</label>
+                            <select class="form-control" id="sizeSelect" [(ngModel)]="selectedSize[product.id]">
+                                <option value="" disabled selected>Select the size</option> <!-- Default option -->
+                                <option *ngFor="let variant of product.variants" [value]="variant">{{ variant }}</option>
+                            </select>
+                        </div>
+                        <p *ngIf="sizeWarning[product.id]" class="text-danger">Please select a size before adding to cart!</p>
+                    </div>
+                </div>
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center">
+                        <button 
+                            class="btn btn-outline-dark mt-auto" 
+                            (click)="addToCart(product)" 
+                            [disabled]="!selectedSize[product.id] || product.stock <= 0">
+                            Add to Cart
+                        </button>
+                        
+                    </div>
+                   <p *ngIf="cartMessages[product.id]" class="text-success mt-2">{{ cartMessages[product.id] }}</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
